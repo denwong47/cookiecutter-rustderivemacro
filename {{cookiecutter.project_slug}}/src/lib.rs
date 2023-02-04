@@ -4,7 +4,7 @@
 //! -------
 //!
 //! ```rust
-//! use {{cookiecutter.project_slug}}::{{cookiecutter.macro_name}};
+//! use {{cookiecutter.project_slug}}::*;
 //!
 //!
 //! #[derive({{cookiecutter.macro_name}})]

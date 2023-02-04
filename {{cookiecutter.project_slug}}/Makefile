@@ -4,6 +4,7 @@ git_init:
 
 # Internal use only.
 git_init_commit:
+	git add -f target/doc/index.html
 	git add --all
 	-pre-commit
 	git add --all
@@ -19,6 +20,6 @@ docs_build: doc
 docs_rebuild: doc
 
 test:
-	cargo test --lib
+	cargo test
 
 setup: git_init precommit_init doc test git_init_commit

@@ -1,3 +1,7 @@
+//! This crate contains macros for export to [`{{cookiecutter.project_slug}}`].
+//! 
+//! [`{{cookiecutter.project_slug}}`]: ../{{cookiecutter.project_slug}}
+//! 
 extern crate proc_macro;
 
 use proc_macro::TokenStream;
@@ -13,9 +17,9 @@ mod func;
 /// -------
 ///
 /// ```ignore
-/// use {{cookiecutter.project_slug}}::{{cookiecutter.macro_name}};
+/// use {{cookiecutter.project_slug}}::*;
 ///
-/// #[derive(ValuedEnum)]
+/// #[derive({{cookiecutter.macro_name}})]
 /// pub struct MyStruct {
 ///     _populate_me: i32,
 /// }
