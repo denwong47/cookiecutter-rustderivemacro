@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Pip install requirements
+      run: |
+        python -m pip install -r requirements.txt
+    - name: Configure git name and emails
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "Github Action"
+    - name: Test Creating Package
+      run: |
+        cookiecutter --no-input .
+        cd rust_derive_macro_boilerplate; cargo test --lib

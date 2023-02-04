@@ -1,0 +1,15 @@
+[package]
+name = "{{cookiecutter.project_slug}}_macros"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "{{cookiecutter.project_slug}}_macros"
+proc-macro = true
+
+[dependencies]
+syn = { version = "1", features = ["derive", "extra-traits"] }
+quote = "1"
+{{cookiecutter.project_slug}}_types = { version = "0", path = "../{{cookiecutter.project_slug}}_types" }
