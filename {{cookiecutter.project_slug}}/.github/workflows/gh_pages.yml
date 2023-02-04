@@ -26,7 +26,7 @@ jobs:
       - name: Cargo fmt
         run: cargo fmt --all
       - name: Cargo doc
-        run: cargo doc --verbose
+        run: make doc
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:

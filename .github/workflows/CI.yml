@@ -25,4 +25,4 @@ jobs:
     - name: Test Creating Package
       run: |
         cookiecutter --no-input .
-        cd rust_derive_macro_boilerplate; cargo test --lib
+        cd rust_derive_macro_boilerplate; make setup

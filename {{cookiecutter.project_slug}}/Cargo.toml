@@ -15,3 +15,6 @@ name = "{{cookiecutter.project_slug}}"
 [dependencies]
 {{cookiecutter.project_slug}}_types = { version = "0", path = "{{cookiecutter.project_slug}}_types", default-features = true, optional = false }
 {{cookiecutter.project_slug}}_macros = { version = "0", path = "{{cookiecutter.project_slug}}_macros", default-features = true, optional = false }
+
+[workspace]
+members = [ "{{cookiecutter.project_slug}}_macros", "{{cookiecutter.project_slug}}_types" ]
