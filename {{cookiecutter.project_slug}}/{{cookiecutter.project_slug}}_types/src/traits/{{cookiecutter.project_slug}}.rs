@@ -2,7 +2,7 @@
 //!
 //! Define any traits required by {{ cookiecutter.macro_name }} here.
 
-/// Sampl Trait to be implemented.
+/// Sample Trait to be implemented.
 pub trait {{cookiecutter.macro_name}} {
 
     /// Test function to check if macro works.
